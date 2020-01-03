@@ -1,0 +1,12 @@
+flavors:
+  python_function:
+    artifacts:
+      xgb_model:
+        path: artifacts/xgb_model.pth
+        uri: xgb_model.pth
+    cloudpickle_version: 1.2.2
+    env: conda.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.7.4
+utc_time_created: '2019-12-23 11:53:35.991623'

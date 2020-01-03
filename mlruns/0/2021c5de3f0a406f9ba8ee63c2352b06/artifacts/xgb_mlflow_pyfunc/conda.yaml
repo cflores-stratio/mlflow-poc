@@ -1,0 +1,6 @@
+channels:
+- defaults
+dependencies:
+- py-xgboost=0.90
+- cloudpickle=1.2.2
+name: xgb_env

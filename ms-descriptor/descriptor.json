@@ -1,0 +1,84 @@
+{
+  "env": {
+    "VAULT_HOST": "vault.service.eos.golf.hetzner.stratio.com",
+    "JAVA_OPTS": "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap",
+    "ROCKET_INTEGRATION": "true",
+    "MS_BASE_PATH": "",
+    "IS_IN_DCOS": "true",
+    "MODEL_URL": "https://tenant1-rocket-antonio.rocket-antonio.tenant1.marathon.mesos:7777/mlModels/serialization/download/6ba13b15-2173-4bf9-9bd9-f7950201dfdb?serLib=mleap&libVersion=0.13.0",
+    "VAULT_PORT": "8200",
+    "USE_DYNAMIC_AUTHENTICATION": "true",
+    "GENERIC_INSTANCE_NAME": "stratio",
+    "VAULT_JSON_CERT_KEY": "stratio",
+    "VAULT_SECRET_CLUSTER": "people"
+  },
+  "id": "/tenant1/rocket-antonio/mlmodels/mlflow-project-mlflow-xgboost-model0-mleap0130",
+  "backoffFactor": 1.15,
+  "backoffSeconds": 1,
+  "container": {
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "servicePort": 10349
+      }
+    ],
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "mlflow-server:latest",
+      "forcePullImage": false,
+      "privileged": false,
+      "parameters": [
+        {
+          "key": "rm",
+          "value": "true"
+        },
+        {
+          "key": "volume",
+          "value": "/etc/resolv.conf:/etc/resolv.conf:ro"
+        }
+      ]
+    }
+  },
+  "cpus": 1,
+  "disk": 0,
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 60,
+      "intervalSeconds": 20,
+      "maxConsecutiveFailures": 3,
+      "portIndex": 0,
+      "timeoutSeconds": 1,
+      "delaySeconds": 15,
+      "protocol": "TCP",
+      "ipProtocol": "IPv4"
+    }
+  ],
+  "instances": 1,
+  "maxLaunchDelaySeconds": 3600,
+  "mem": 512,
+  "gpus": 0,
+  "networks": [
+    {
+      "name": "tenant1-core",
+      "mode": "container"
+    }
+  ],
+  "requirePorts": false,
+  "secrets": {
+    "role": {
+      "source": "open"
+    }
+  },
+  "upgradeStrategy": {
+    "maximumOverCapacity": 1,
+    "minimumHealthCapacity": 1
+  },
+  "killSelection": "YOUNGEST_FIRST",
+  "unreachableStrategy": {
+    "inactiveAfterSeconds": 0,
+    "expungeAfterSeconds": 0
+  },
+  "fetch": [],
+  "constraints": []
+}

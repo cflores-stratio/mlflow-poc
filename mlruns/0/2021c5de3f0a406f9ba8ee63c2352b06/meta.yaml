@@ -1,0 +1,15 @@
+artifact_uri: file:///home/cflores/stratio/pocs/mlflow/rocket-mlflow/mlruns/0/2021c5de3f0a406f9ba8ee63c2352b06/artifacts
+end_time: 1576842405473
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 2021c5de3f0a406f9ba8ee63c2352b06
+run_uuid: 2021c5de3f0a406f9ba8ee63c2352b06
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1576842402457
+status: 3
+tags: []
+user_id: cflores

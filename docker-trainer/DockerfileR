@@ -1,0 +1,14 @@
+FROM continuumio/miniconda3:4.7.12
+MAINTAINER Stratio Rocket <rocket@stratio.com>
+
+RUN conda update -y conda
+
+#RUN pip install mlflow
+
+RUN pip install mlflow \
+    && pip install numpy \
+    && pip install scipy \
+    && pip install pandas \
+    && pip install scikit-learn \
+    && pip install cloudpickle \
+    && pip install xgboost
