@@ -1,0 +1,4 @@
+artifact_location: file:///home/cflores/stratio/pocs/mlflow/rocket-mlflow/mlflow_model_example/mlruns/0
+experiment_id: '0'
+lifecycle_stage: active
+name: Default
